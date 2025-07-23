@@ -1,413 +1,121 @@
-Demographics (1–10)
-Estimated age
+CelebA 40 attrs → [C]
 
-Age bucket (child/teen/20s/30s/40s/50s/60+)
+FairFace (race, age bucket, gender) → [F]
 
-Perceived gender
+InsightFace/DeepFace style analyzers (age, gender, emotion, pose, quality, occlusion, glasses, beard, mask, etc.) → [I]
 
-Perceived race/ethnicity (primary)
+1. Identity & Demographics (one‑hot unless noted)
+Gender (male/female/other) [F][I] (one-hot, 3)
 
-Secondary/mixed ethnicity indicator
+Race/Ethnicity (FairFace 7 or 9 classes) [F] (one-hot)
 
-Skin tone (Fitzpatrick I–VI)
+Age bucket (FairFace buckets, e.g., 0–2, 3–9, 10–19, 20–29, 30–39, 40–49, 50–59, 60–69, 70+) [F] (one-hot)
 
-Freckling presence
+Estimated age (continuous) [I] (scalar 0–100)
 
-Sunburn/tan level
+2. Global Face Geometry / Presence
+Attractive [C] (binary)
 
-Skin undertone (cool/neutral/warm)
+Young [C] (binary) keep even though age bucket exists—different signal
 
-Visible skin conditions (acne, scars, vitiligo, etc.)
+Big Nose [C] (binary)
 
-Global Face Geometry (11–24)
-Face width/height ratio
+Pointy Nose [C] (binary)
 
-Face shape (oval/round/square/heart/diamond/oblong)
+High Cheekbones [C] (binary)
 
-Forehead height
+Oval Face [C] (binary)
 
-Forehead width
+Chubby [C] (binary)
 
-Cheekbone prominence
+Double Chin [C] (binary)
 
-Jaw width
+3. Hair & Head
+Bald [C] (binary)
 
-Jaw angle (sharp/soft)
+Black Hair [C] (binary)
 
-Chin length
+Blond Hair [C] (binary)
 
-Chin width
+Brown Hair [C] (binary)
 
-Chin shape (pointed/rounded/square/cleft)
+Gray Hair [C] (binary)
 
-Facial asymmetry score
+Straight Hair [C] (binary)
 
-Face slenderness vs. fullness
+Wavy Hair [C] (binary)
 
-Overall BMI impression (thin/average/overweight)
+Receding Hairline [C] (binary)
 
-Babyface index (youthful features proportion)
+Wearing Hat/Headwear [C][I] (binary)
 
-Skin Details (25–38)
-Wrinkle depth (forehead)
+4. Facial Hair
+No Beard [C] (binary)
 
-Crow’s feet presence
+5 o’Clock Shadow [C] (binary)
 
-Nasolabial fold depth
+Goatee [C] (binary)
 
-Marionette line depth
+Mustache [C] (binary)
 
-Pore visibility
+Beard (generic presence) [I] (binary) (can collapse with previous if redundant)
 
-Skin smoothness score
+5. Eyes / Eyewear
+Narrow Eyes [C] (binary)
 
-Blemish count
+Bags Under Eyes [C] (binary)
 
-Acne presence (active)
+Arched Eyebrows [C] (binary)
 
-Scar count (face)
+Bushy Eyebrows [C] (binary)
 
-Scar prominence
+Eyeglasses [C] (binary)
 
-Birthmark presence
+Heavy Makeup (eyes) [C] (binary)
 
-Mole count (face)
+Sunglasses [I] (binary)
 
-Mole size max
+6. Mouth / Lips / Teeth
+Big Lips [C] (binary)
 
-Redness/rosacea level
+Mouth Slightly Open [C] (binary)
 
-Hair (Scalp) (39–58)
-Hair presence (bald/partial/full)
+Smiling [C] (binary)
 
-Hair length (none/very short/short/medium/long)
+Lipstick [C] (binary)
 
-Hair texture (straight/wavy/curly/coily)
+7. Skin / Marks
+Pale Skin [C] (binary)
 
-Hair thickness/density
+Rosy Cheeks [C] (binary)
 
-Hairline shape (straight/M-shaped/receding)
+Heavy Makeup (face overall) [C] (binary)
 
-Widow’s peak presence
+Wearing Earrings [C] (binary)
 
-Bald spot presence (crown)
+Wearing Necklace [C] (binary)
 
-Sideburn length
+Wearing Necktie [C] (binary)
 
-Hair color primary
+8. Occlusions & Accessories (extra from InsightFace)
+Face Mask (medical/cloth) [I] (binary)
 
-Hair color secondary highlights
+Hand Over Face / Occlusion [I] (binary)
 
-Dyed hair indicator
+Headphones/Headset/Mic [I] (binary)
 
-Root regrowth visible
+9. Expression / Emotion (one‑hot)
+Emotion [I] (happy, sad, angry, fear, surprise, disgust, neutral) (one-hot 7)
 
-Hair parting (left/right/middle/none)
+10. Pose & Image Quality
+Yaw [I] (continuous degrees or normalized −1..1)
 
-Bangs/fringe presence
+Pitch [I] (continuous)
 
-Updo/ponytail/bun indicator
+Roll (tilt) [I] (continuous)
 
-Dreadlocks/braids/twists indicator
+Face detection quality score [I] (scalar 0–1)
 
-Afro/volume style indicator
+Blur level / sharpness [I] (scalar 0–1)
 
-Slicked/gelled appearance
-
-Wet hair look
-
-Hat/head covering presence
-
-Eyebrows (59–70)
-Eyebrow thickness
-
-Eyebrow length
-
-Eyebrow arch height
-
-Eyebrow distance (brow–brow gap)
-
-Unibrow presence
-
-Eyebrow grooming (plucked/trimmed/natural)
-
-Eyebrow color vs. hair color match
-
-Eyebrow asymmetry
-
-Eyebrow shape (straight/arced/angled)
-
-Eyebrow makeup presence
-
-Brow slit/shaved pattern
-
-Microblading/tattooed brows indicator
-
-Eyes (71–98)
-Eye size (relative to face)
-
-Eye width/height ratio
-
-Interpupillary distance
-
-Eye shape (almond/round/hooded/monolid)
-
-Epicanthic fold presence
-
-Eyelid crease depth
-
-Eyelash length
-
-Eyelash volume (mascara/falsies)
-
-Eye color primary
-
-Heterochromia indicator
-
-Sclera visibility (white showing below iris)
-
-Dark circle intensity
-
-Eye bag puffiness
-
-Redness/irritation in eyes
-
-Eye glossiness/teariness
-
-Gaze direction (front/left/right/up/down)
-
-Squinting level
-
-Narrowed eyes (anger/concentration cue)
-
-Eye openness (surprise cue)
-
-Wink indicator
-
-Cross-eye/strabismus presence
-
-Pupil dilation size
-
-Contacts/lenses presence
-
-Colored contacts indicator
-
-Glasses presence
-
-Glasses type (full rim/half rim/rimless)
-
-Sunglasses/opaque glasses presence
-
-Glare/reflection on glasses
-
-Nose (99–116)
-Nose length
-
-Nose width (alar base)
-
-Bridge height
-
-Bridge width
-
-Dorsal hump presence
-
-Nasal tip shape (upturned/downturned/flat/bulbous)
-
-Nostril size
-
-Nostril shape (round/slit/oval)
-
-Asymmetry (nostrils/bridge)
-
-Septum deviation visible
-
-Flaring nostrils (expression)
-
-Piercing presence
-
-Piercing type/count
-
-Rhinoplasty indicator (surgical signs)
-
-Blackheads on nose
-
-Shine/oiliness on nose
-
-Nose freckles
-
-Bridge shadow intensity
-
-Mouth & Lips (117–138)
-Lip thickness (upper)
-
-Lip thickness (lower)
-
-Cupid’s bow definition
-
-Lip symmetry
-
-Lip corner position (up/down/neutral)
-
-Lip dryness/chapping
-
-Lip glossiness (lipstick/gloss)
-
-Lip color natural
-
-Lipstick presence
-
-Lipstick color hue
-
-Lip liner presence
-
-Smile width (teeth exposure)
-
-Teeth visibility count
-
-Teeth alignment (straight/crooked/gapped)
-
-Tooth color/whiteness
-
-Braces/retainer presence
-
-Tongue visibility
-
-Open mouth degree
-
-Overbite/underbite indication
-
-Dimple presence (cheek/chin)
-
-Nasolabial crease depth (re-affirm)
-
-Saliva shine/drool indicator
-
-Ears (139–148)
-Ear size
-
-Ear protrusion (stick-out)
-
-Earlobe type (attached/free)
-
-Ear asymmetry
-
-Ear piercings count
-
-Gauge/stretchers presence
-
-Ear jewelry type (stud/hoop/dangle)
-
-Visible ear hair
-
-Hearing aid/earbud presence
-
-Ear redness/flushing
-
-Facial Hair (149–162)
-Beard presence
-
-Beard length (stubble/short/medium/long)
-
-Beard coverage (partial/full/patchy)
-
-Beard shape (goatee/mustache/full/chinstrap)
-
-Mustache presence
-
-Mustache thickness
-
-Soul patch presence
-
-Sideburn connection to beard
-
-Beard grooming level (trimmed/wild)
-
-Beard color vs. scalp hair match
-
-Gray hairs in facial hair
-
-Clean-shaven indicator
-
-Five o’clock shadow visibility
-
-Neck beard presence
-
-Makeup (163–178)
-Foundation presence
-
-Contouring visibility (cheeks/nose)
-
-Blush presence/intensity
-
-Highlighter/glow presence
-
-Bronzer/tan makeup presence
-
-Eye shadow presence
-
-Eye shadow color family
-
-Eyeliner presence
-
-Eyeliner style (winged/tightline/heavy)
-
-Mascara presence (already partly in lashes—flag redundancy)
-
-False lashes indicator
-
-Glitter/shimmer elements
-
-Lip gloss vs. matte lipstick distinction
-
-Setting powder/matte finish indicator
-
-Face paint/body art (non-makeup)
-
-Temporary tattoos/stickers on face
-
-Accessories & Occlusions (179–188)
-Face mask presence (medical/fashion)
-
-Veil/mesh covering
-
-Bandage/plaster on face
-
-Microphone/headset near mouth
-
-Oxygen cannula/tube presence
-
-Scarfs/hoods obscuring face
-
-Hands/objects partially covering face
-
-Food/drink object near mouth
-
-Cigarette/vape presence
-
-Snow/rain/water droplets on face
-
-Pose, Expression & Lighting (189–197)
-Head yaw angle (left/right)
-
-Head pitch angle (up/down)
-
-Head roll (tilt)
-
-Smile intensity score
-
-Emotion label (happy/sad/angry/fear/surprise/disgust/neutral)
-
-Mouth open/closed state
-
-Lighting direction (front/side/back/top)
-
-Lighting hardness (soft/hard shadows)
-
-Color cast (warm/cool/greenish)
-
-Image/Capture Meta (198–200)
-Resolution quality score
-
-Motion blur level
-
-Compression artifacts level (JPEG blockiness)
+Occlusion score [I] (scalar 0–1)
