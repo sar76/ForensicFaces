@@ -1,0 +1,413 @@
+Demographics (1–10)
+Estimated age
+
+Age bucket (child/teen/20s/30s/40s/50s/60+)
+
+Perceived gender
+
+Perceived race/ethnicity (primary)
+
+Secondary/mixed ethnicity indicator
+
+Skin tone (Fitzpatrick I–VI)
+
+Freckling presence
+
+Sunburn/tan level
+
+Skin undertone (cool/neutral/warm)
+
+Visible skin conditions (acne, scars, vitiligo, etc.)
+
+Global Face Geometry (11–24)
+Face width/height ratio
+
+Face shape (oval/round/square/heart/diamond/oblong)
+
+Forehead height
+
+Forehead width
+
+Cheekbone prominence
+
+Jaw width
+
+Jaw angle (sharp/soft)
+
+Chin length
+
+Chin width
+
+Chin shape (pointed/rounded/square/cleft)
+
+Facial asymmetry score
+
+Face slenderness vs. fullness
+
+Overall BMI impression (thin/average/overweight)
+
+Babyface index (youthful features proportion)
+
+Skin Details (25–38)
+Wrinkle depth (forehead)
+
+Crow’s feet presence
+
+Nasolabial fold depth
+
+Marionette line depth
+
+Pore visibility
+
+Skin smoothness score
+
+Blemish count
+
+Acne presence (active)
+
+Scar count (face)
+
+Scar prominence
+
+Birthmark presence
+
+Mole count (face)
+
+Mole size max
+
+Redness/rosacea level
+
+Hair (Scalp) (39–58)
+Hair presence (bald/partial/full)
+
+Hair length (none/very short/short/medium/long)
+
+Hair texture (straight/wavy/curly/coily)
+
+Hair thickness/density
+
+Hairline shape (straight/M-shaped/receding)
+
+Widow’s peak presence
+
+Bald spot presence (crown)
+
+Sideburn length
+
+Hair color primary
+
+Hair color secondary highlights
+
+Dyed hair indicator
+
+Root regrowth visible
+
+Hair parting (left/right/middle/none)
+
+Bangs/fringe presence
+
+Updo/ponytail/bun indicator
+
+Dreadlocks/braids/twists indicator
+
+Afro/volume style indicator
+
+Slicked/gelled appearance
+
+Wet hair look
+
+Hat/head covering presence
+
+Eyebrows (59–70)
+Eyebrow thickness
+
+Eyebrow length
+
+Eyebrow arch height
+
+Eyebrow distance (brow–brow gap)
+
+Unibrow presence
+
+Eyebrow grooming (plucked/trimmed/natural)
+
+Eyebrow color vs. hair color match
+
+Eyebrow asymmetry
+
+Eyebrow shape (straight/arced/angled)
+
+Eyebrow makeup presence
+
+Brow slit/shaved pattern
+
+Microblading/tattooed brows indicator
+
+Eyes (71–98)
+Eye size (relative to face)
+
+Eye width/height ratio
+
+Interpupillary distance
+
+Eye shape (almond/round/hooded/monolid)
+
+Epicanthic fold presence
+
+Eyelid crease depth
+
+Eyelash length
+
+Eyelash volume (mascara/falsies)
+
+Eye color primary
+
+Heterochromia indicator
+
+Sclera visibility (white showing below iris)
+
+Dark circle intensity
+
+Eye bag puffiness
+
+Redness/irritation in eyes
+
+Eye glossiness/teariness
+
+Gaze direction (front/left/right/up/down)
+
+Squinting level
+
+Narrowed eyes (anger/concentration cue)
+
+Eye openness (surprise cue)
+
+Wink indicator
+
+Cross-eye/strabismus presence
+
+Pupil dilation size
+
+Contacts/lenses presence
+
+Colored contacts indicator
+
+Glasses presence
+
+Glasses type (full rim/half rim/rimless)
+
+Sunglasses/opaque glasses presence
+
+Glare/reflection on glasses
+
+Nose (99–116)
+Nose length
+
+Nose width (alar base)
+
+Bridge height
+
+Bridge width
+
+Dorsal hump presence
+
+Nasal tip shape (upturned/downturned/flat/bulbous)
+
+Nostril size
+
+Nostril shape (round/slit/oval)
+
+Asymmetry (nostrils/bridge)
+
+Septum deviation visible
+
+Flaring nostrils (expression)
+
+Piercing presence
+
+Piercing type/count
+
+Rhinoplasty indicator (surgical signs)
+
+Blackheads on nose
+
+Shine/oiliness on nose
+
+Nose freckles
+
+Bridge shadow intensity
+
+Mouth & Lips (117–138)
+Lip thickness (upper)
+
+Lip thickness (lower)
+
+Cupid’s bow definition
+
+Lip symmetry
+
+Lip corner position (up/down/neutral)
+
+Lip dryness/chapping
+
+Lip glossiness (lipstick/gloss)
+
+Lip color natural
+
+Lipstick presence
+
+Lipstick color hue
+
+Lip liner presence
+
+Smile width (teeth exposure)
+
+Teeth visibility count
+
+Teeth alignment (straight/crooked/gapped)
+
+Tooth color/whiteness
+
+Braces/retainer presence
+
+Tongue visibility
+
+Open mouth degree
+
+Overbite/underbite indication
+
+Dimple presence (cheek/chin)
+
+Nasolabial crease depth (re-affirm)
+
+Saliva shine/drool indicator
+
+Ears (139–148)
+Ear size
+
+Ear protrusion (stick-out)
+
+Earlobe type (attached/free)
+
+Ear asymmetry
+
+Ear piercings count
+
+Gauge/stretchers presence
+
+Ear jewelry type (stud/hoop/dangle)
+
+Visible ear hair
+
+Hearing aid/earbud presence
+
+Ear redness/flushing
+
+Facial Hair (149–162)
+Beard presence
+
+Beard length (stubble/short/medium/long)
+
+Beard coverage (partial/full/patchy)
+
+Beard shape (goatee/mustache/full/chinstrap)
+
+Mustache presence
+
+Mustache thickness
+
+Soul patch presence
+
+Sideburn connection to beard
+
+Beard grooming level (trimmed/wild)
+
+Beard color vs. scalp hair match
+
+Gray hairs in facial hair
+
+Clean-shaven indicator
+
+Five o’clock shadow visibility
+
+Neck beard presence
+
+Makeup (163–178)
+Foundation presence
+
+Contouring visibility (cheeks/nose)
+
+Blush presence/intensity
+
+Highlighter/glow presence
+
+Bronzer/tan makeup presence
+
+Eye shadow presence
+
+Eye shadow color family
+
+Eyeliner presence
+
+Eyeliner style (winged/tightline/heavy)
+
+Mascara presence (already partly in lashes—flag redundancy)
+
+False lashes indicator
+
+Glitter/shimmer elements
+
+Lip gloss vs. matte lipstick distinction
+
+Setting powder/matte finish indicator
+
+Face paint/body art (non-makeup)
+
+Temporary tattoos/stickers on face
+
+Accessories & Occlusions (179–188)
+Face mask presence (medical/fashion)
+
+Veil/mesh covering
+
+Bandage/plaster on face
+
+Microphone/headset near mouth
+
+Oxygen cannula/tube presence
+
+Scarfs/hoods obscuring face
+
+Hands/objects partially covering face
+
+Food/drink object near mouth
+
+Cigarette/vape presence
+
+Snow/rain/water droplets on face
+
+Pose, Expression & Lighting (189–197)
+Head yaw angle (left/right)
+
+Head pitch angle (up/down)
+
+Head roll (tilt)
+
+Smile intensity score
+
+Emotion label (happy/sad/angry/fear/surprise/disgust/neutral)
+
+Mouth open/closed state
+
+Lighting direction (front/side/back/top)
+
+Lighting hardness (soft/hard shadows)
+
+Color cast (warm/cool/greenish)
+
+Image/Capture Meta (198–200)
+Resolution quality score
+
+Motion blur level
+
+Compression artifacts level (JPEG blockiness)
